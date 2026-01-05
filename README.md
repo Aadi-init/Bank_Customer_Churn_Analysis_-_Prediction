@@ -24,7 +24,7 @@ The analysis revealed several critical drivers of customer attrition, visualized
 ### 1. Class Distribution
 The dataset exhibits a significant class imbalance, with approximately **8,000** customers staying and **2,000** customers exiting. This prompted the use of specialized metrics like Precision and Recall rather than Accuracy alone.
 
-![Churn Distribution](output/Churn_distribution_StayedVSLeft.png)
+![Churn Distribution](Output/Churn_distribution_StayedVSLeft.png)
 
 ### 2. Behavioral Patterns
 The researcher identified three primary pillars of churn behavior:
@@ -33,7 +33,7 @@ The researcher identified three primary pillars of churn behavior:
 * **Capital Density (Violin Plot)**: Customers who leave (`Exited=1`) show a high concentration of account balances around the **$125k** mark, whereas staying customers have a more varied distribution including many near-zero balances.
 * **Activity Gap (Bar Chart)**: Inactive members churn at a rate of **~27%**, nearly double the **~14%** churn rate observed in active members.
 
-![Data Patterns](output/Data_pattern.png)
+![Data Patterns](Output/Data_pattern.png)
 
 ## Machine Learning Results
 A **Random Forest Classifier** was trained and optimized. The researcher utilized `class_weight='balanced'` to ensure the model effectively learned the characteristics of the minority churn class.
@@ -46,7 +46,7 @@ A **Random Forest Classifier** was trained and optimized. The researcher utilize
 ### Feature Importance
 Analysis confirmed that **Age** and the engineered **`CreditScore_Age_Ratio`** were the top two drivers influencing the model's decisions, validating the researcher's feature engineering strategy.
 
-![Feature Importance](output/Feature_importance.png)
+![Feature Importance](Output/Feature_importance.png)
 
 ## How to Run the Project
 To reproduce this analysis locally, follow these steps:
